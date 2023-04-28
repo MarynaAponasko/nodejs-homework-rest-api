@@ -1,6 +1,8 @@
 const fs = require("fs/promises");
 const path = require("path");
 const Jimp = require("jimp");
+const { ctrlWrapper } = require("../../utils");
+
 
 const { User } = require("../../models");
 
@@ -25,5 +27,5 @@ const updateAvatar = async (req, res) => {
 };
 
 module.exports = {
-  updateAvatar,
+  updateAvatar: ctrlWrapper(updateAvatar),
 };
