@@ -2,6 +2,7 @@ const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
 require("dotenv").config();
+
 // console.log(process.env.DB_HOST);
 
 const { contactsRouter, authRouter } = require("./routes/api");
